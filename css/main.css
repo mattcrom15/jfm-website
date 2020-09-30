@@ -159,6 +159,14 @@ html {
 .product-hero-image{
   transition: 0.3s ease-in-out;
 }
+
+.product-container{
+  width: 450rem; 
+  height: auto; 
+  position: relative; 
+  top:0; 
+  left:0;
+}
   .about-info {
     padding: 2rem;
     margin: auto 0;
@@ -307,7 +315,6 @@ html {
     font-size: 16px;
   }
   header{
-   background-color: green;
    padding: 0;
   }
 
@@ -356,6 +363,32 @@ html {
 
   .product-main{
     display: block;
+    padding: 0;
+  }
+
+  .product-hero-image{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-page-thumbnail{
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-info{
+    width: 100%;
+  }
+
+  .product-container{
+    width: 24rem;
+  }
+
+  .similar-products{
+    display: block;
   }
 
   .about-content{
@@ -373,8 +406,6 @@ html {
     margin-top: 2rem;
   }
 
-  .about-info p{
-    font-size: 16px;
-  }
+ 
 
 }

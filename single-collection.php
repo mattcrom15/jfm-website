@@ -8,8 +8,8 @@ Template Name: Product
 
 <?php get_header('Product');?>
 
-<div style="product-main">
-      <div style="width: 450rem; height: auto">
+<div class="product-main">
+      <div class="product-container">
       <?php $product = get_post() ?>  
       <?php $thumbs = get_field('thumbnails');?>
       <?php if (has_post_thumbnail( $product->ID ) ): ?>
@@ -19,7 +19,7 @@ Template Name: Product
               <?php if($thumbs):
                 $i = 1;
                 foreach($thumbs as $thumb):?>
-                <img src="<?php echo esc_url($thumb['sizes']['medium']); ?>" alt="" srcset="" class="product-hero-image" photoid ="<?php echo $i;?>"  style="position: absolute; top: 0%; height: auto; opacity: 0;
+                <img src="<?php echo esc_url($thumb['sizes']['medium']); ?>" alt="" srcset="" class="product-hero-image" photoid ="<?php echo $i;?>"  style="position: absolute; top: 0%; opacity: 0;
   left: 13%;">
               <?php
               $i ++;
@@ -58,7 +58,7 @@ Template Name: Product
         </div>
       </div>
     </div>
-    <section style="similar-products">
+    <section class="similar-products">
      <?php $product_cat =  get_the_terms( $product->ID, 'Product types' )[0]->name;
 
 
@@ -75,7 +75,7 @@ Template Name: Product
                     ?>
                    <div class="project-item-product">
                    <?php if (has_post_thumbnail( $p->ID ) ): ?>
-                        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID), 'small' ); ?>
+                        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID), 'thumbnail' ); ?>
                         <div class="container">
                           <a  href="<?php echo esc_html( $p->guid ); ?>">
                           <img src="<?php echo $image[0]; ?>" class="product-image-shop" alt="" srcset="">
