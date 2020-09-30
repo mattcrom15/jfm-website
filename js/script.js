@@ -1,4 +1,4 @@
-
+// image slideshow
 function Slideshow(elem){
     const images = document.querySelectorAll('.product-hero-image');
     const thumbid = elem.getAttribute('thumbnailid');
