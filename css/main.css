@@ -295,6 +295,10 @@ html {
     margin-right: 1rem;
   }
 
+  .hamburger,.close-ico{
+    display: none;
+  }
+
 
   /*  keyframes */
 @keyframes pagefade {
@@ -315,15 +319,41 @@ html {
     font-size: 16px;
   }
   header{
-   padding: 0;
+   padding-left: 0;
+   padding-right: 0;
+
+
   }
 
   nav{
-    display: none;
+    padding: 0;
+    position: fixed;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: white;
+
+  }
+
+  .menu{
+    float: none;
+    right: auto;
+    display: inline;
+  }
+
+  .menu-item{
+    font-size: 24px;
+    margin-bottom: 2rem;
   }
 
   .logo{
-   margin: auto 0;
+    display: block;
+    margin: auto 0;
+
+
+
 
   }
 
