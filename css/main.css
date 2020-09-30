@@ -72,7 +72,7 @@ html {
   }
 
   
-  .logo-placeholder {
+  .logo {
     width: 48px;
     height: 48px;
     margin-left: 2rem;
@@ -80,10 +80,11 @@ html {
     transition: 0.3s ease-in-out;
   }
   
-  .logo-placeholder:hover {
+  .logo:hover {
     filter: invert(0.5);
   }
   
+
   .menu li {
     margin-right: 5rem;
   }
@@ -94,6 +95,7 @@ html {
     color: rgb(177, 177, 177);
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    
   }
   
   .menu a:hover {
@@ -104,6 +106,17 @@ html {
     color: black;
   }
   
+  .about-content{
+    display: flex; 
+    padding: 5rem;
+  }
+
+  .similar-products{
+    padding-left: 3rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   
   .project-title {
@@ -147,6 +160,14 @@ html {
 
 .product-hero-image{
   transition: 0.3s ease-in-out;
+}
+
+.product-container{
+  width: 450rem; 
+  height: auto; 
+  position: relative; 
+  top:0; 
+  left:0;
 }
   .about-info {
     padding: 2rem;
@@ -261,6 +282,12 @@ html {
   .product-subtitle {
     font-size: 16px;
   }
+
+  .product-main{
+    display: flex; 
+    padding: 5rem; 
+    padding-top: 2rem;
+  }
   
 
   .product-page-thumbnail{
@@ -268,6 +295,10 @@ html {
     transition: 0.3s ease-in-out;
     margin-top: 0.5rem;
     margin-right: 1rem;
+  }
+
+  .hamburger,.close-ico{
+    display: none;
   }
 
 
@@ -279,4 +310,172 @@ html {
   to {
     opacity: 1;
   }
+}
+
+
+@media (max-width: 600px) {
+  h3{
+    font-size: 18px;
+  }
+  p{
+    font-size: 16px;
+  }
+  header{
+   padding:0;
+  }
+
+  nav{
+    padding: 0;
+    position: fixed;
+    margin: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: white;
+
+  }
+
+  .menu{
+    padding-top:5rem ;
+  }
+
+  .close-ico{
+    display: none;
+    position: absolute;
+    top: 2%;
+    right: 0;
+    margin-right: 1rem;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .close-ico:hover{
+    filter: invert(0.5);
+  }
+
+  .hamburger{
+    display: block;
+    position: absolute;
+    top: 1.5%;
+    right: 0;
+    margin-right: 1rem;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+  }
+
+  .menu{
+
+    right: auto;
+    display: inline;
+  }
+
+  .menu-item{
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+
+  .logo{
+    display: block;
+    margin: auto 0;
+    transform: translateX(50%);
+
+
+
+
+  }
+
+  .home-project-items{
+    display: block;
+    width: 100vw;
+    margin-left: 0;
+  }
+
+  .hero-image{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .home-project-image img{
+    width: 100%;
+  }
+
+  .project-title, .project-subtitle{
+    text-align: center;
+
+    
+  }
+
+  .project-subtitle{
+    margin-bottom: 1rem;
+  }
+
+  .shop-grid{
+    display: block;
+  }
+
+  .product-image-shop{
+    margin-right: 0;
+  }
+
+  .product-main{
+    display: block;
+    padding: 0;
+  }
+
+  .product-hero-image{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-thumbnails{
+    margin-top: 7rem;
+  }
+
+  .product-page-thumbnail{
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-info{
+    width: 100%;
+  }
+
+  .product-container{
+    width: 24rem;
+    padding-top: 1rem;
+  }
+
+  .similar-products{
+    display: block;
+  }
+
+  .about-content{
+    display: block;
+  }
+  
+  .dotted-line{
+    display: none;
+  }
+
+  .about-image{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+ 
+
 }
