@@ -109,7 +109,12 @@ html {
     padding: 5rem;
   }
 
-  
+  .similar-products{
+    padding-left: 3rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   
   .project-title {
@@ -267,6 +272,12 @@ html {
   .product-subtitle {
     font-size: 16px;
   }
+
+  .product-main{
+    display: flex; 
+    padding: 5rem; 
+    padding-top: 2rem;
+  }
   
 
   .product-page-thumbnail{
@@ -341,6 +352,10 @@ html {
 
   .product-image-shop{
     margin-right: 0;
+  }
+
+  .product-main{
+    display: block;
   }
 
   .about-content{

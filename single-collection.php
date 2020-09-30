@@ -8,7 +8,7 @@ Template Name: Product
 
 <?php get_header('Product');?>
 
-<div style="display: flex; padding: 5rem; padding-top: 2rem">
+<div style="product-main">
       <div style="width: 450rem; height: auto">
       <?php $product = get_post() ?>  
       <?php $thumbs = get_field('thumbnails');?>
@@ -58,9 +58,7 @@ Template Name: Product
         </div>
       </div>
     </div>
-    <section style="padding-left: 3rem; display: flex;
-     justify-content: center;
-     align-items: center;">
+    <section style="similar-products">
      <?php $product_cat =  get_the_terms( $product->ID, 'Product types' )[0]->name;
 
 
@@ -77,7 +75,7 @@ Template Name: Product
                     ?>
                    <div class="project-item-product">
                    <?php if (has_post_thumbnail( $p->ID ) ): ?>
-                        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID), 'thumbnail' ); ?>
+                        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID), 'small' ); ?>
                         <div class="container">
                           <a  href="<?php echo esc_html( $p->guid ); ?>">
                           <img src="<?php echo $image[0]; ?>" class="product-image-shop" alt="" srcset="">
