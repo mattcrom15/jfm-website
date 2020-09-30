@@ -9,26 +9,39 @@ Template Name: Product
 <?php get_header('Product');?>
 
 <div style="display: flex; padding: 5rem; padding-top: 2rem">
-      <div style="width: 450rem; height: auto">
+      <div style="width: 450rem; height: auto; position: relative;">
       <?php $product = get_post() ?>  
+      <?php $thumbs = get_field('thumbnails');?>
       <?php if (has_post_thumbnail( $product->ID ) ): ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->ID ),'large' ); ?>
-              <img src="<?php echo $image[0]; ?>" alt="" srcset="" id="product-hero-image">
+              <img src="<?php echo $image[0]; ?>" alt="" srcset="" class="product-hero-image" photoid = "0" style="position: relative; top: 0; opacity:1;
+  left: 0;">
+              <?php if($thumbs):
+                $i = 1;
+                foreach($thumbs as $thumb):?>
+                <img src="<?php echo esc_url($thumb['sizes']['medium']); ?>" alt="" srcset="" class="product-hero-image" photoid ="<?php echo $i;?>"  style="position: absolute; top: 0%; height: auto; opacity: 0;
+  left: 13%;">
+              <?php
+              $i ++;
+            endforeach;
+            endif;?>
         <?php endif; ?>
         <div class="product-thumbnails">
         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->ID ),'thumbnail' ); ?>
               <div class="container">
-                <img src="<?php echo $image[0]; ?>" alt="" srcset="" class="product-page-thumbnail">
+                <img src="<?php echo $image[0]; ?>" alt="" srcset="" class="product-page-thumbnail" thumbnailid = "0"  onclick="Slideshow(this);">
                 <div class="overlay"></div>
               </div>
-          <?php $thumbs = get_field('thumbnails');?>
           <?php if($thumbs):
+               $i = 1;
               foreach($thumbs as $thumb):?>
               <div class="container">
-                  <img src="<?php echo esc_url($thumb['sizes']['thumbnail']); ?>" class="product-page-thumbnail">
+                  <img src="<?php echo esc_url($thumb['sizes']['thumbnail']); ?>" class="product-page-thumbnail" thumbnailid = "<?php echo $i?>" onclick="Slideshow(this);">
                   <div class="overlay"></div>
               </div>
-              <?php endforeach;
+              <?php
+              $i ++;
+            endforeach;
             endif;?>
         </div>
       </div>
