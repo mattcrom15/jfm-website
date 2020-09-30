@@ -29,7 +29,7 @@ Template Name: shop
             </div>
         <?php endif; ?>
                   <h3 class="project-title"><?php echo $p->post_title?></h3>
-                  <p>£<?php echo $p->product_price?></p>
+                  <p class="project-subtitle">£<?php echo $p->product_price?></p>
             </div>
         <?php endforeach;?>
         

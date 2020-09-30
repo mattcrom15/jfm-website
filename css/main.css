@@ -323,5 +323,12 @@ html {
     margin-bottom: 1rem;
   }
 
+  .shop-grid{
+    display: block;
+  }
+
+  .product-image-shop{
+    margin-right: 0;
+  }
 
 }
