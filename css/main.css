@@ -144,8 +144,10 @@ html {
     column-gap: 2rem;
     row-gap: 2rem;
   }
-  
 
+.product-hero-image{
+  transition: 0.3s ease-in-out;
+}
   .about-info {
     padding: 2rem;
     margin: auto 0;
