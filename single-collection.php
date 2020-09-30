@@ -39,9 +39,9 @@ Template Name: Product
           <?php the_field("product_information");?>
         </p>
         <h2 class="price">£<?php the_field("product_price");?></h2>
+        <p style="font-style: italic;">For purchasing options, please contact me below.</p>
         <div class="btns">
           <button class="btn-primary">Purchase</button>
-          <button class="btn-secondary">More info</button>
         </div>
       </div>
     </div>
