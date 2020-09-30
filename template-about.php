@@ -6,7 +6,7 @@ Template Name: about
 
 <?php get_header('About');?>
 
-<div style="about-content">
+<div class="about-content">
       <img src="<?php the_field('about_image')?>" alt="" srcset="" class="about-image">
       <div class="dotted-line"></div>
       <div class="about-info-page">

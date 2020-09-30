@@ -109,7 +109,4 @@ function my_first_taxonomy(){
    return $classes;
  }
 
- function RandomPosts($array){
-     $ps = array_rand($array,3);
-    return $ps;
- }
+ 
