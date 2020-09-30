@@ -285,6 +285,7 @@ html {
 @media (max-width: 600px) {
   header{
    background-color: green;
+   padding: 0;
   }
 
   nav{
@@ -297,13 +298,30 @@ html {
   }
 
   .home-project-items{
-    display: inline;
+    display: block;
+    width: 100vw;
     margin-left: 0;
   }
 
-
-
   .hero-image{
-    height: auto;
+    display: block;
+    margin: 0 auto;
+
   }
+
+  .home-project-image img{
+    width: 100%;
+  }
+
+  .project-title, .project-subtitle{
+    text-align: center;
+
+    
+  }
+
+  .project-subtitle{
+    margin-bottom: 1rem;
+  }
+
+
 }
