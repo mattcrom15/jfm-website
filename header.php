@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-<a href="<?php echo get_home_url();?>"><img class="logo-placeholder" src="http://jfm-website.test/wp-content/uploads/2020/09/jfm-logo_240920.png" alt="" srcset=""></a>
+<a href="<?php echo get_home_url();?>"><img class="logo" src="http://jfm-website.test/wp-content/uploads/2020/09/jfm-logo_240920.png" alt="" srcset=""></a>
 <nav>
             <?php 
         wp_nav_menu(
