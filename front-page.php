@@ -1,6 +1,6 @@
 <?php get_header();?>
 <img src="<?php echo the_field('hero_image')?>" class="hero-image" alt="">
-    <section class="home-project-items">
+    <div class="home-project-items">
     <?php
 
 $i=1;
@@ -54,5 +54,5 @@ else :
   // Do something...
 endif;
 ?>
-    </section>
+    </div>
 <?php get_footer();?>
