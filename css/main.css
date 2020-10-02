@@ -125,16 +125,17 @@ html {
   
   .project-title {
     margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
   }
   
  
   .home-project-items {
     padding: 0 5%;
-    margin-top: 3rem;
+    margin-top: 12rem;
     margin-bottom: 6rem;
     display: grid;
     justify-content: center;
-    grid-gap: 5%;
+    grid-gap: 3%;
     column-gap: 5%;
     justify-items: center;
     align-items: center;
@@ -152,6 +153,7 @@ html {
     grid-column-start: 1; 
     grid-column-end: 4; 
   }
+
   .shop-grid {
     justify-content: center;
     padding-top: 1rem;
@@ -243,6 +245,8 @@ html {
   
   .product-thumbnails {
     display: flex;
+    justify-content: center;
+    overflow-x: scroll;
   }
   
   .btn-primary {
@@ -290,6 +294,7 @@ html {
   
   .product-title {
     font-size: 24px;
+    
   }
   
   .product-subtitle {
@@ -335,6 +340,9 @@ html {
   }
   header{
    padding:0;
+   position: relative;
+   background-color: white;
+   z-index: 10000;
   }
 
   nav{
@@ -394,9 +402,11 @@ html {
   }
 
   .logo{
-    display: block;
     margin: auto 0;
-    transform: translateX(50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
 
 
 
@@ -423,8 +433,6 @@ html {
 
   .project-title, .project-subtitle{
     text-align: center;
-
-    
   }
 
   .project-subtitle{
